@@ -1,66 +1,65 @@
 # This file was generated based on ".graphqlconfig". Do not edit manually.
 
 schema {
-    query: Query
-    mutation: Mutation
-    subscription: Subscription
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
 }
 
 type AuthPayload {
-    bearer: String!
-    firstName: String!
-    id: ID!
-    lastName: String!
+  bearer: String!
+  firstName: String!
+  id: ID!
+  lastName: String!
 }
 
 type FileProgress {
-    complete: Float!
-    total: Float!
+  complete: Float!
+  total: Float!
 }
 
 type Image {
-    encoding: String!
-    filename: String!
-    mimetype: String!
-    url: String!
+  encoding: String!
+  filename: String!
+  mimetype: String!
+  url: String!
 }
 
 type Mutation {
-    login(credentials: Credentials!): AuthPayload
-    uploadImage(file: Upload!): Image!
+  login(credentials: Credentials!): AuthPayload
+  uploadImage(file: Upload!): Image!
 }
 
 type Query {
-    me: User!
+  me: User!
 }
 
 type Role {
-    name: String!
+  name: String!
 }
 
 type Subscription {
-    uploadStatus(fileName: String!): FileProgress!
+  uploadStatus(fileName: String!): FileProgress!
 }
 
 type User {
-    created: DateTime!
-    deleted: DateTime
-    firstName: String!
-    fullName: String!
-    id: ID!
-    isActive: Boolean!
-    lastName: String!
-    modified: DateTime!
-    phoneNumber: String!
-    roles: [Role!]!
-    title: String!
+  created: DateTime!
+  deleted: DateTime
+  firstName: String!
+  fullName: String!
+  id: ID!
+  isActive: Boolean!
+  lastName: String!
+  modified: DateTime!
+  phoneNumber: String!
+  roles: [Role!]!
+  title: String!
 }
 
 input Credentials {
-    email: String!
-    password: String!
+  email: String!
+  password: String!
 }
-
 
 "The javascript `Date` as string. Type represents date and time as the ISO Date string."
 scalar DateTime

@@ -1,4 +1,4 @@
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 module.exports = {
   overwrite: true,
   schema: `http://${process.env.GRAPHQL_ENDPOINT ?? 'localhost:4000'}/graphql`,
@@ -20,4 +20,4 @@ module.exports = {
       plugins: ['introspection'],
     },
   },
-};
+}
